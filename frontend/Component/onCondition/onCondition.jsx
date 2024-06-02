@@ -2,7 +2,7 @@
 import { useMediaQuery } from "@uidotdev/usehooks";
 import React from "react";
 import Navbar from "../Navbar/navbar";
-import Sidebar from "../Sidebar/sidebar";
+import Sidebar from "../Display/display";
 const OnCondition = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
   const isMediumDevice = useMediaQuery(

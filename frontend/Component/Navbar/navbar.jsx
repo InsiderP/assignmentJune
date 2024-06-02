@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -14,7 +14,7 @@ import {
 // import {AcmeLogo} from "./AcmeLogo.jsx";
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
     "Profile",
@@ -30,37 +30,44 @@ export default function App() {
   ];
 
   return (
-    <Navbar className="bg-blue-800" isBordered onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent className="flex items-center bg-yellow-500">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand className="flex items-center ml-[-10px]">
-          {/* <AcmeLogo /> */}
-          <img
-            src="https://www.onelot.ph/_next/image?url=%2Flogo1.png&w=128&q=75"
-            className="w-[150px] bg-red-400"
-            alt="ACME Logo"
+    <Navbar isBordered maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
+      <NavbarContent className="flex-none">
+        <NavbarContent>
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className="sm:hidden"
           />
-        </NavbarBrand>
-        <div className="hidden sm:flex gap-4 ml-4">
+          <NavbarBrand>
+            <img
+              src="https://www.onelot.ph/_next/image?url=%2Flogo1.png&w=128&q=75"
+              className="w-[120px]"
+              alt="ACME Logo"
+            />
+          </NavbarBrand>
+        </NavbarContent>
+
+        <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem>
             <Link color="foreground" href="#">
-              Features
+              Home
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
-            <Link href="#" aria-current="page">
-              Customers
+            <Link href="#" color="foreground" aria-current="page">
+              Products
             </Link>
           </NavbarItem>
           <NavbarItem>
             <Link color="foreground" href="#">
-              Integrations
+              About
             </Link>
           </NavbarItem>
-        </div>
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Contact
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
