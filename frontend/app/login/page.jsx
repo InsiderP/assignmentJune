@@ -2,7 +2,6 @@
 import Errmsg from "@/core/Errmsg";
 import useLogin from "@/libs/mutation/userLogin";
 
-
 import { Button, Input } from "@nextui-org/react";
 
 import React, { useState } from "react";
@@ -17,7 +16,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-    const { mutate: LoginFunc, isLoading: loginLoading } = useLogin();
+  const { mutate: LoginFunc, isLoading: loginLoading } = useLogin();
 
   const onSubmit = (formdata) => {
     LoginFunc(formdata);
@@ -33,7 +32,7 @@ const Login = () => {
         </div>
         <form
           className="flex flex-col gap-4 mt-2"
-            onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <div>
             <Controller
@@ -48,7 +47,6 @@ const Login = () => {
                     <Input
                       onChange={onChange}
                       value={value}
-                      maxLength={10}
                       label="Enter email"
                       color="blue"
                     />

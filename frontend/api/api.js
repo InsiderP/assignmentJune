@@ -11,6 +11,7 @@ let token;
 const api = axios.create({
   withCredentials: true,
   baseURL,
+
   headers: {
     token: token ? token : getCookie("authToken"),
     "Content-Type": "application/json",

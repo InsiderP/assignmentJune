@@ -6,4 +6,4 @@ const allRoutes = express.Router();
 
 allRoutes.use("/user", userRouter);
 
-module.exports = { allRoutes };
+module.exports = allRoutes;

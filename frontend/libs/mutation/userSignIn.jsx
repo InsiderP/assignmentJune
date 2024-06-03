@@ -7,7 +7,7 @@ const useSignIn = () => {
   const router = useRouter();
   const signIn = useMutation({
     mutationFn: async (obj) => {
-      const res = await api.post("users/create", obj);
+      const res = await api.post("/user/create", obj);
       return res?.data;
     },
     onSuccess: (data) => {

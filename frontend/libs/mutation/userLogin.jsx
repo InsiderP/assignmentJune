@@ -7,7 +7,7 @@ const useLogin = () => {
   const router = useRouter();
   const uselogin = useMutation({
     mutationFn: async (obj) => {
-      const res = await api.post("users/login", obj, {
+      const res = await api.post("/user/login", obj, {
         withCredentials: true,
       });
       console.log(res);
