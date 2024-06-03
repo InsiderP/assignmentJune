@@ -6,22 +6,13 @@ const cors = require("cors");
 const allRoutes = require("./router/allRoutes");
 const cookieParser = require("cookie-parser");
 
-// const corsOptions = {
-//   origin: ["http://localhost:3000/"],
-//   credentials: true,
-// };
-// app.use(morgan("tiny"));
-
-const corsOpts = {
-  origin: "*",
-
-  methods: ["GET", "POST"],
-
-  allowedHeaders: ["Content-Type"],
+const corsOptions = {
+  origin: ["http://localhost:3000"],
   credentials: true,
 };
+// app.use(morgan("tiny"));
 
-app.use(cors(corsOpts));
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api", allRoutes);
