@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Provider from "./provider";
+// import ReduxToolkit from "@/utils/ReduxToolkit";
+import { ReactQuery } from "@/utils/ReactQuery";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,7 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Provider>{children}</Provider>
+        <ReactQuery>
+          <Provider>{children}</Provider>
+        </ReactQuery>
       </body>
     </html>
   );
