@@ -43,6 +43,11 @@ const faqs = [
     answer:
       "Yes, it is possible. We understand that a dealer's needs can be multifaceted, so as long as the cumulative loan amount doesn't exceed the approved credit limit and the dealer maintains a strong repayment record, multiple loans are feasible.",
   },
+  {
+    question: "Can I have several OneLot loans out at once?",
+    answer:
+      "Yes, it is possible. We understand that a dealer's needs can be multifaceted, so as long as the cumulative loan amount doesn't exceed the approved credit limit and the dealer maintains a strong repayment record, multiple loans are feasible.",
+  },
 ];
 
 const FAQItem = ({ faq, index, openIndex, setOpenIndex }) => {
