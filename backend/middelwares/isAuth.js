@@ -49,12 +49,12 @@ module.exports.isAuthSocket = async (socket, next) => {
     } else {
       socket.findQuery = { branchId: socket.branchId };
     }
-    socket.profile = user;
-    socket.orgNumber = user.orgNumber;
-    socket.orgId = user.orgId;
-    socket.branchId = user.branchId;
-    socket.role = user.role;
-    next();
+    // socket.profile = user;
+    // socket.orgNumber = user.orgNumber;
+    // socket.orgId = user.orgId;
+    // socket.branchId = user.branchId;
+    // socket.role = user.role;
+    // next();
   } catch (error) {
     return next(new Error("Internal Server Error"));
   }
