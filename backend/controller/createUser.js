@@ -24,7 +24,7 @@ const CreateController = async (req, res) => {
     await create.validate();
 
     await create.save();
-    console.log(create);
+    // console.log(create);
     return res.status(200).json({
       message: "User Created Successfully",
       status: true,
