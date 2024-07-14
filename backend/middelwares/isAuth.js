@@ -44,11 +44,11 @@ module.exports.isAuthSocket = async (socket, next) => {
       return next(new Error("Unauthorized"));
     }
 
-    if (user.name === "superadmin") {
-      socket.findQuery = { orgNumber: socket.orgNumber };
-    } else {
-      socket.findQuery = { branchId: socket.branchId };
-    }
+    // if (user.name === "superadmin") {
+    //   socket.findQuery = { orgNumber: socket.orgNumber };
+    // } else {
+    //   socket.findQuery = { branchId: socket.branchId };
+    // }
     // socket.profile = user;
     // socket.orgNumber = user.orgNumber;
     // socket.orgId = user.orgId;
